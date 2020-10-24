@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Rubik', sans-serif;
+}
+
+.loading {
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  position: absolute;
+  display: block;
+  z-index: 99;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .5rem 2rem;
+  position: relative;
+}
+nav .shape {
+  width: 25px;
+  height: 25px;
+  background-color: #20bf6b;
+  border-radius: 50px;
+  position: absolute;
+  right: 75px;
+  top: 50px;
+  animation: 3s float ease-in-out infinite;
+}
+nav .shape:before {
+  content: '';
+  width: 30px;
+  height: 15px;
+  background-color: #f7b731;
+  position: absolute;
+  left: 20px;
+  top: -30px;
+  animation: 6s flote ease-in-out infinite;
+}
+nav .shape:after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid #4b7bec;
+  position: absolute;
+  left: 40px;
+  top: 5px;
+  animation: 6s float ease-in-out infinite;
+}
+
+nav .logo {
+  padding: .4rem .3rem;
+  background-color: #4b7bec;
+  border-radius: 50px;
+  animation: float 5s ease-in-out infinite;
+  position: relative;
+}
+nav .logo img {
+  height: 50px;
+  filter: invert(100%);
+}
+nav .logo:before {
+  content: '';
+  width: 35px;
+  height: 35px;
+  background-color: #eb3b5a;
+  position: absolute;
+  right: -45px;
+  top: 10px;
+  animation: 4s flotes ease-in-out infinite;
+}
+nav .logo:after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 20px solid #8854d0;
+  position: absolute;
+  left: -30px;
+  top: 50px;
+  animation: 3s float ease-in-out infinite;
+}
+
+nav .shape2 {
+  width: 40px;
+  height: 40px;
+  background-color: #20bf6b;
+  border-radius: 50px;
+  position: absolute;
+  left: 85px;
+  top: 10px;
+  animation: 4s float ease-in-out infinite;
+}
+nav .shape2:before {
+  content: '';
+  width: 35px;
+  height: 25px;
+  background-color: #eb3b5a;
+  position: absolute;
+  right: 65px;
+  top: 40px;
+  animation: 5s flote ease-in-out infinite;
+}
+nav .shape2:after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-color: #fa8231;
+  position: absolute;
+  left: -30px;
+  top: 0px;
+  animation: 6s flotes ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes flote {
+  0% {
+    transform: translateY(0px)rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px)rotate(90deg);
+  }
+  50% {
+    transform: translateY(0px)rotate(180deg);
+  }
+  75% {
+    transform: translateY(-5px)rotate(270deg);
+  }
+  100% {
+    transform: translateY(0px)rotate(360deg);
+  }
+}
+@keyframes flotes {
+  0% {
+    transform: translateY(0px)rotate(360deg);
+  }
+  25% {
+    transform: translateY(-10px)rotate(270deg);
+  }
+  50% {
+    transform: translateY(0px)rotate(180deg);
+  }
+  75% {
+    transform: translateY(-5px)rotate(90deg);
+  }
+  100% {
+    transform: translateY(0px)rotate(0deg);
+  }
+}
+
+hr {
+  border: .1px solid lightgrey;
+  margin: 1.5rem 1rem .5rem;
+}
+
+.title {
+  text-align: center;
+  margin: .5rem .5rem 0;
+}
+
+.indicator {
+  margin: 0 0 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.indicator .liveicon {
+  width: 10px;
+  height: 10px;
+  background-color: #eb3b5a;
+  border-radius: 50px;
+  margin-right: .5rem;
+  animation: 1.5s blinker linear infinite;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+
+.product {
+  padding: .5rem 0;
+}
+.product .listitem {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: scroll;
+}
+.product .items {
+  margin: 0 4rem 0 0;
+}
+.product .items:first-child {
+  margin: 0 4rem 0 1rem;
+}
+.product .items .image {
+  position: relative;
+  width: 150px;
+  height: 200px;
+  background-color: #eb3b5a;
+  border-radius: 10px;
+}
+.product .items .image .label {
+  padding: .2rem .3rem;
+  background-color: white;
+  color: #eb3b5a;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border-radius: 5px 10px;
+}
+.product .items .image h1 {
+  transform: rotate(-90deg)translateX(-95px)translateY(-55px);
+  color: white;
+}
+.product .items .image img {
+  height: 150px;
+  position: absolute;
+  bottom: -15px;
+  left: 35px;
+}
+
+.product .listitem .lastitem {
+  margin: 0 1rem;
+  visibility: hidden;
+}
+
+.product .items .data {
+  margin: .5rem 0;
+}
+.product .items .data button {
+  padding: .3rem .6rem;
+  background-color: #26de81;
+  color: white;
+  border: 0;
+  border-radius: 10px;
+  outline: none;
+}
+.product .items .data button:hover {
+  background-color: #20bf6b;
+}
+
+.customercart {
+  margin: 1rem;
+  border: 1px dotted lightgrey;
+  border-radius: 50px;
+}
+.customercart .emptycart {
+  padding: .5rem 1rem;
+  display: none;
+}
+.customercart .emptycart small {
+  color: lightgrey;
+  font-size: .8rem;
+}
+
+.customercart .fillcart {
+  display: none;
+}
+.customercart .fillcart .group {
+  padding: .5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.customercart .fillcart .group .totalmenu h4 {
+  font-weight: 500;
+}
+.customercart .fillcart .group .totalmenu p {
+  font-weight: 700;
+}
+.customercart .fillcart .group .totalmenu p:before {
+  content: "Rp ";
+  font-weight: 400;
+}
+
+.customercart .fillcart .checkout button {
+  padding: .5rem;
+  background-color: #26de81;
+  color: white;
+  border: 0;
+  border-radius: 10px;
+  outline: none;
+}
+.customercart .fillcart .checkout button:hover {
+  background-color: #20bf6b;
+}
+
+
+footer:before {
+  content: "Copyright ©2020. BoluBoks. All Right Reserved";
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: lightgrey;
+  font-size: .7rem;
+  white-space: nowrap;
+}

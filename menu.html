@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>Menu - BoluBoks Webstore</title>
+  <link rel="stylesheet" href="menu.css" type="text/css" media="all" />
+</head>
+<body>
+  <div class="loading"></div>
+  <nav>
+    <div class="shape"></div>
+    <div class="logo">
+      <img src="asset/logo.png" alt="Logo" />
+    </div>
+    <div class="shape2"></div>
+  </nav>
+  <hr />
+  <div class="title">
+    <h1>MainMenu</h1>
+  </div>
+  <div class="indicator">
+    <div class="liveicon"></div>
+    <p id="TanggalPO">
+      Tanggal
+    </p>
+  </div>
+  <div class="product">
+    <div class="listitem"></div>
+  </div>
+  <div class="customercart">
+    <div class="emptycart">
+      <small>Nanti semua pesanan kakak beserta total harganya muncul disini...
+      </small>
+    </div>
+    <div class="fillcart">
+      <div class="group">
+        <div class="totalmenu">
+          <h4>Total @<span id="count-cart"></span> Menu</h4>
+          <p>
+            <span id="total-cart"></span>
+          </p>
+        </div>
+        <div class="checkout">
+          <button>Detail Pesanan</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer></footer>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="menu.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript" src="cart.js"></script>
+  <script src="asset/shoppingCart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+</body>
+</html>
