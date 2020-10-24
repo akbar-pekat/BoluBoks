@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Rubik', sans-serif;
+}
+
+.splash {
+  height: 100vh;
+  text-align: center;
+}
+.splash img {
+  width: 100%;
+}
+
+footer:before {
+  content: "Copyright ©2020. BoluBoks. All Right Reserved";
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: lightgrey;
+  font-size: .7rem;
+  white-space: nowrap;
+}
