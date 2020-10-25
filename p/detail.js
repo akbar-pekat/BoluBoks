@@ -14,11 +14,9 @@ $(document).ready(function() {
   function displayCart() {
     var cartArray = shoppingCart.listCart();
     var cAlength = cartArray.length;
-    console.log(cartArray);
     if (cartArray == 0) {
       window.location.replace("menu.html")
     }
-    console.log(cartArray.length);
     var output = "";
 
     for (var i in cartArray) {
@@ -26,8 +24,6 @@ $(document).ready(function() {
     }
     $("#show-carth").html(output);
     $("#total-cart").html(shoppingCart.totalCartTax());
-    $("#total-cart2").hide();
-    $("#total-cart2").html(shoppingCart.addDiscount());
   }
 
   $("#show-carth").on("click", ".delete-item", function(event) {
@@ -38,9 +34,19 @@ $(document).ready(function() {
 
   $("#discountfix").click(function(event) {
     var voucher = $("#voucherinput").val();
-    if (voucher === "AkbarGanteng") {
-      $("#total-cart2").show();
-      $("#total-cart").hide();
+    if (voucher === "BebasOngkir") {
+      $("#total-cart").html(shoppingCart.addDiscount());
+      $("#discountfix").hide();
+      $("#diskon").html("Diskon: BebasOngkir (-Rp 5000)");
+      toastr.success('Selamat kak, vouchernya berhasil dipakai');
+      toastr.options.preventDuplicates = true;
+    } else if (voucher === "") {
+      toastr.info('Diketik dulu kak kode vouchernya');
+      toastr.options.preventDuplicates = true;
+    } else {
+      toastr.error('Maaf kak, kode voucher nya salah/sudah kadaluarsa');
+      toastr.options.preventDuplicates = true;
+
     }
   });
 

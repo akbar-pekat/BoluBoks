@@ -24,8 +24,6 @@ var shoppingCart = (function () {
 
   loadCart();
 
-
-
   // Public methods and properties
   var obj = {};
 
@@ -37,8 +35,6 @@ var shoppingCart = (function () {
         return;
       }
     }
-
-    console.log("addItemToCart:", name, price, count);
 
     var item = new Item(name, price, count);
     cart.push(item);
@@ -70,7 +66,6 @@ var shoppingCart = (function () {
     }
     saveCart();
   };
-
 
   obj.removeItemFromCartAll = function (name) {
     // removes all item name
@@ -113,27 +108,27 @@ var shoppingCart = (function () {
     // -> return total cost
     var totalCost = 0;
     for (var i in cart) {
-      totalCost += cart[i].price * cart[i].count + 5000;
+      totalCost += cart[i].price * cart[i].count;
     }
+    totalCost = totalCost + 5000;
     return totalCost.toFixed(0);
   };
 
   obj.addDiscount = function () {
     // -> return total cost
-    var totalCost = 0;
-    for (var i in cart) {
-      totalCost += cart[i].price * cart[i].count - (10/100);
-    }
+    var totalPrice = parseInt($("#total-cart").text());
+    console.log(totalPrice)
+    var totalCost = totalPrice - 5000;
+    //for (var i in cart) {
+    //totalCost += cart[i].price * cart[i].count - (10/100);
+    //}
     return totalCost.toFixed(0);
   };
 
   obj.listCart = function () {
     // -> array of Items
     var cartCopy = [];
-    console.log("Listing cart");
-    console.log(cart);
     for (var i in cart) {
-      console.log(i);
       var item = cart[i];
       var itemCopy = {};
       for (var p in item) {

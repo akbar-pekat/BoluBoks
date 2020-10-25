@@ -5,6 +5,7 @@
   <title>Detail - BoluBoks Webstore</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="detail.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" type="text/css" media="all" />
 </head>
 <body>
   <div class="loading"></div>
@@ -49,8 +50,11 @@
         <p>
           Ongkos Kirim: Rp 5000
         </p>
+        <p id="diskon">
+          Diskon: -
+        </p>
         <p>
-          Voucher:
+          Kode Voucher:
         </p>
         <div class="wrap">
           <input type="text" id="voucherinput" placeholder="Tulis disini" />
@@ -62,15 +66,14 @@
           Total Bayar
         </p>
         <h3 id="total-cart"></h3>
-        <h3 id="total-cart2"></h3>
       </div>
     </div>
   </div>
-  <footer></footer>
   <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
   <script src="detail.js" type="text/javascript" charset="utf-8"></script>
   <script type="text/javascript" src="cart.js"></script>
   <script src="shoppingCart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

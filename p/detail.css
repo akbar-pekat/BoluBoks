@@ -200,7 +200,7 @@ hr {
   overflow-y: scroll;
 }
 .customercart #show-carth li {
-  margin: 0 0 1rem;
+  margin: 0 0 .5rem;
 }
 .customercart #show-carth li .group {
   display: flex;
@@ -247,7 +247,7 @@ hr {
 .customercart .taxdisc p {
   margin: 0 0 .5rem;
 }
-.customercart .taxdisc p:nth-child(2) {
+.customercart .taxdisc p:nth-child(3) {
   margin: 0 0 .1rem;
 }
 .customercart .taxdisc .wrap {
@@ -257,10 +257,10 @@ hr {
 .customercart .taxdisc #voucherinput {
   padding: .5rem;
   font-size: .8rem;
-  border: 1px solid black;
+  border: 1px solid lightgrey;
   border-radius: 10px;
   outline: none;
-  width: 70px;
+  width: 100px;
 }
 .customercart .taxdisc #discountfix {
   padding: .5rem;
@@ -275,4 +275,11 @@ hr {
 
 .customercart .finaltotal h3:before {
   content: "Rp ";
+}
+
+.customercart .finaltotal .totalprice {
+  padding: .5rem;
+  background-color: #20bf6b;
+  color: white;
+  border-radius: 10px;
 }
