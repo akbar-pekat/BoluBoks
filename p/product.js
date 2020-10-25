@@ -26,7 +26,7 @@ $(document).ready(function() {
     }
 
     countcart = $("#count-cart").text();
-    if (countcart == "5") {
+    if (countcart == "10") {
       $("#addMenu").css("background-color", "#d1d8e0");
     } else {
       $("#addMenu").css("background-color", "#4b7bec");
@@ -55,7 +55,7 @@ $(document).ready(function() {
     $("#ProductPrice").html(entry.fields.hargaProduk)
 
     setTimeout(function() {
-      $(".addcart").append('<button id="addMenu" data-name="'+entry.fields.namaProduk+'" data-price="'+entry.fields.hargaProduk+'">Tambah</button>&nbsp;<button id="removeMenu" data-name="'+entry.fields.namaProduk+'">Kurang</button><div class="checkout"><button>Detail Pesanan</button></div>');
+      $(".addcart").append('<button id="addMenu" data-name="'+entry.fields.namaProduk+'" data-price="'+entry.fields.hargaProduk+'">Tambah</button>&nbsp;<button id="removeMenu" data-name="'+entry.fields.namaProduk+'">Kurang</button><div class="checkout"><button id="detail">Detail Pesanan</button></div>');
 
       var countcart
 
@@ -65,7 +65,7 @@ $(document).ready(function() {
         var price = Number($(this).attr("data-price"));
 
         countcart = $("#count-cart").text();
-        if (countcart > 4) {
+        if (countcart > 9) {
           $("#addMenu").css("background-color", "#d1d8e0");
         } else {
           $("#addMenu").css("background-color", "#4b7bec");
@@ -80,13 +80,19 @@ $(document).ready(function() {
         shoppingCart.removeItemFromCart(name);
 
         countcart = $("#count-cart").text();
-        if (countcart < 5) {
+        if (countcart < 10) {
           $("#addMenu").css("background-color", "#4b7bec");
         } else {
           $("#addMenu").css("background-color", "#d1d8e0");
         }
         displayCart();
       });
+      
+      $("#detail").click(function(event) {
+      event.preventDefault();
+      window.location.href = "detail.html"
+    });
+    
     },
       500);
   });

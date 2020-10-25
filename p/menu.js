@@ -56,6 +56,12 @@ $(document).ready(function() {
       localStorage.setItem("ProdukID", dataidmenu);
       window.location.href = "product.html"
     });
+    
+    $("#detail").click(function(event) {
+      event.preventDefault();
+      window.location.href = "detail.html"
+    });
+    
   });
 
 });
