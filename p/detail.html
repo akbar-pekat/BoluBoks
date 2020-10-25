@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>Detail - BoluBoks Webstore</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="detail.css" type="text/css" media="all" />
+</head>
+<body>
+  <div class="loading"></div>
+  <nav>
+    <div class="shape"></div>
+    <div class="logo">
+      <img src="logo.png" alt="Logo" />
+    </div>
+    <div class="shape2"></div>
+  </nav>
+  <hr />
+  <div class="back" id="back">
+    <img src="right.svg" alt="" />
+    <h4>Kembali</h4>
+  </div>
+  <div class="title">
+    <h1>Detail Pesanan</h1>
+  </div>
+  <div class="customercart">
+    <ul id="show-carth">
+      <li>
+        <div class="group">
+          <div class="name">
+            <h3>'+cartArrayt[i].name+'</h3>
+            <div class="qyt">
+              <p>
+                Rp '+cartArrayt[i].price+'
+              </p>
+              <span>&nbsp;x&nbsp;</span>
+              <input type="number" id="input" value="'+cartArrayt[i].count+'" readonly />
+              <span>=&nbsp;Rp '+cartArrayt[i].total+'</span>
+            </div>
+          </div>
+          <div class="action">
+            <button class="delete-item" data-name="'+cartArray[i].name+'">Hapus</button>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div class="finaltotal">
+      <div class="taxdisc">
+        <p>
+          Ongkos Kirim: Rp 5000
+        </p>
+        <p>
+          Voucher:
+        </p>
+        <div class="wrap">
+          <input type="text" id="voucherinput" placeholder="Tulis disini" />
+          <button id="discountfix">Cek</button>
+        </div>
+      </div>
+      <div class="totalprice">
+        <p>
+          Total Bayar
+        </p>
+        <h3 id="total-cart"></h3>
+        <h3 id="total-cart2"></h3>
+      </div>
+    </div>
+  </div>
+  <footer></footer>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="detail.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript" src="cart.js"></script>
+  <script src="shoppingCart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+</body>
+</html>

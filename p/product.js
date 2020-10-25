@@ -87,12 +87,12 @@ $(document).ready(function() {
         }
         displayCart();
       });
-      
+
       $("#detail").click(function(event) {
-      event.preventDefault();
-      window.location.href = "detail.html"
-    });
-    
+        event.preventDefault();
+        window.location.href = "detail.html"
+      });
+
     },
       500);
   });

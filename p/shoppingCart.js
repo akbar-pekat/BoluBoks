@@ -109,6 +109,24 @@ var shoppingCart = (function () {
     return totalCost.toFixed(0);
   };
 
+  obj.totalCartTax = function () {
+    // -> return total cost
+    var totalCost = 0;
+    for (var i in cart) {
+      totalCost += cart[i].price * cart[i].count + 5000;
+    }
+    return totalCost.toFixed(0);
+  };
+
+  obj.addDiscount = function () {
+    // -> return total cost
+    var totalCost = 0;
+    for (var i in cart) {
+      totalCost += cart[i].price * cart[i].count - (10/100);
+    }
+    return totalCost.toFixed(0);
+  };
+
   obj.listCart = function () {
     // -> array of Items
     var cartCopy = [];
