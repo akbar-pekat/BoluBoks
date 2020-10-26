@@ -114,10 +114,17 @@ var shoppingCart = (function () {
     return totalCost.toFixed(0);
   };
 
-  obj.addDiscount = function () {
+  obj.DiscBO = function () {
     // -> return total cost
     var totalPrice = parseInt($("#total-cart").text());
     var totalCost = totalPrice - 5000;
+    return totalCost.toFixed(0);
+  };
+
+  obj.Disc5 = function () {
+    // -> return total cost
+    var totalPrice = parseInt($("#total-cart").text());
+    var totalCost = totalPrice - 40000;
     return totalCost.toFixed(0);
   };
 

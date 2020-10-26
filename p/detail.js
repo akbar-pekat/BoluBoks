@@ -37,13 +37,13 @@ $(document).ready(function() {
   $("#discountfix").click(function(event) {
     var voucher = $("#voucherinput").val();
     if (voucher === "BebasOngkir") {
-      $("#total-cart").html(shoppingCart.addDiscount());
+      $("#total-cart").html(shoppingCart.DiscBO());
       $("#discountfix").hide();
       $("#diskon").html("Diskon: BebasOngkir (-Rp 5000)");
       toastr.success('Selamat kak, vouchernya berhasil dipakai');
       toastr.options.preventDuplicates = true;
-    } else if (voucher === "ALUMNI6B") {
-      $("#total-cart").html(shoppingCart.addDiscount());
+    } else if (voucher === "ADMINTES") {
+      $("#total-cart").html(shoppingCart.Disc5());
       $("#discountfix").hide();
       $('#voucherinput').attr('readonly', true);
       $("#diskon").html("Diskon: ALUMNI6B (-Rp 5000)");
@@ -80,20 +80,20 @@ $(document).ready(function() {
       "E8347004-91FC-469C-BC23-43B6D8749267");
     formdata.append("action",
       "payment");
-    formdata.append("product",
+    formdata.append("product[]",
       namecount);
-    formdata.append("price",
+    formdata.append("price[]",
       totalprice);
-    formdata.append("quantity",
+    formdata.append("quantity[]",
       "1");
     formdata.append("comments",
-      "Pembayaran Pesanan BoluBoks");
+      "Pembayaran BoluBoks");
     formdata.append("ureturn",
-      "https://boluboks.com/");
+      "https://boluboks.com/p/menu.html");
     formdata.append("unotify",
-      "https://boluboks.com/");
+      "https://boluboks.com/p/detail.html");
     formdata.append("ucancel",
-      "https://boluboks.com/");
+      "https://boluboks.com/p/detail.html");
     formdata.append("format",
       "xml");
 
@@ -115,7 +115,7 @@ $(document).ready(function() {
         37);
       $("#responseipay").html(s2);
     },
-      2000);
+      1500);
   });
 
   $("#bayarbtn").click(function(event) {
