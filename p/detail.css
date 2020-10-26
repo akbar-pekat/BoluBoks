@@ -283,3 +283,20 @@ hr {
   color: white;
   border-radius: 10px;
 }
+
+.buttonipay {
+  padding: .5rem 1rem;
+}
+.buttonipay button {
+  padding: .5rem;
+  width: 100%;
+  background-color: #eb3b5a;
+  color: white;
+  font-size: 1.1rem;
+  border: 0;
+  border-radius: 10px;
+  outline: none;
+}
+.buttonipay button:nth-child(2) {
+  background-color: #20bf6b;
+}
