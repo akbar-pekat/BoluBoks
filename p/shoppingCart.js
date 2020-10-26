@@ -117,11 +117,7 @@ var shoppingCart = (function () {
   obj.addDiscount = function () {
     // -> return total cost
     var totalPrice = parseInt($("#total-cart").text());
-    console.log(totalPrice)
     var totalCost = totalPrice - 5000;
-    //for (var i in cart) {
-    //totalCost += cart[i].price * cart[i].count - (10/100);
-    //}
     return totalCost.toFixed(0);
   };
 

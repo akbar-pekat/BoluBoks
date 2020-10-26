@@ -40,11 +40,18 @@ $(document).ready(function() {
       $("#diskon").html("Diskon: BebasOngkir (-Rp 5000)");
       toastr.success('Selamat kak, vouchernya berhasil dipakai');
       toastr.options.preventDuplicates = true;
+    } else if (voucher === "ALUMNI6B") {
+      $("#total-cart").html(shoppingCart.addDiscount());
+      $("#discountfix").hide();
+      $('#voucherinput').attr('readonly', true);
+      $("#diskon").html("Diskon: ALUMNI6B (-Rp 5000)");
+      toastr.success('Selamat kak, vouchernya berhasil dipakai');
+      toastr.options.preventDuplicates = true;
     } else if (voucher === "") {
       toastr.info('Diketik dulu kak kode vouchernya');
       toastr.options.preventDuplicates = true;
     } else {
-      toastr.error('Maaf kak, kode voucher nya salah/sudah kadaluarsa');
+      toastr.error('Maaf kak, kode vouchernya salah/sudah kadaluarsa');
       toastr.options.preventDuplicates = true;
 
     }
